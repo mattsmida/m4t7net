@@ -1,17 +1,26 @@
 body {
   max-width: 40em;
-  margin: 0 auto;
-  padding: 5px;
+  margin: 2% auto;
+  padding: 15px;
   font-family: Georgia, serif;
   font-size: 18px;
   line-height: 1.6em;
   color: black;
 }
-h1, h2, h3 {
+h1, h2, h3, nav {
   font-family: sans-serif;
   font-weight: normal;
 }
 
+nav a:link {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:visited{
+  text-decoration: none;
+  color: black;
+}
 
 nav ul {
   text-align: right;
@@ -19,8 +28,13 @@ nav ul {
 
 nav ul li {
   display: inline;
+  margin: 1%;
 }
 
 #profile-pic {
-  scale: 80%;
+  float: right;
+  width: 30%;
+  height: auto;
+  border-radius: 25%;
+  padding: 10px;
 }
