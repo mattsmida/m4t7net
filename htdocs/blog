@@ -11,9 +11,9 @@
     <div>
       <span id='site-name'><a href="./index.html">M4T7</a></span>
       <ul>
-        <li><a href='./about.html'>About</a></li>
-        <li><a href='./blog.html'>Blog</a></li>
-        <li><a href='./contact.html'>Contact</a></li>
+        <li><a href='./about'>About</a></li>
+        <li><a href='./blog'>Blog</a></li>
+        <li><a href='./contact'>Contact</a></li>
       </ul>
       </div>
     </nav>
@@ -22,21 +22,21 @@
   <p>
     <strong>How to live?</strong> <date>2023-07</date>
     <br>
-    &nbsp;&nbsp;1. <a href='./htl1.html'>Freedom</a><br>
-    &nbsp;&nbsp;2. <a href='./htl2.html'>Contribution</a><br>
-    &nbsp;&nbsp;3. <a href='./htl3.html'>Adventure</a><br>
-    &nbsp;&nbsp;4. <a href='./htl4.html'>Iteration</a>
+    &nbsp;&nbsp;1. <a href='./htl1'>Freedom</a><br>
+    &nbsp;&nbsp;2. <a href='./htl2'>Contribution</a><br>
+    &nbsp;&nbsp;3. <a href='./htl3'>Adventure</a><br>
+    &nbsp;&nbsp;4. <a href='./htl4'>Iteration</a>
     <br>
-    <a href='./blackrock.html'>Black Rock</a>
+    <a href='./blackrock'>Black Rock</a>
     <date>2022-07-30</date>
     <br>
-    <a href='./binderclip.html'>Binder clip</a>
+    <a href='./binderclip'>Binder clip</a>
     <date>2017-02-16</date>
     <br>
-    <a href='./diygrad.html'>How to DIY a graduation ceremony</a>
+    <a href='./diygrad'>How to DIY a graduation ceremony</a>
     <date>2016-12-25</date>
     <br>
-    <a href='./tallbike.html'>My bike is too tall</a>
+    <a href='./tallbike'>My bike is too tall</a>
     <date>2016-12-05</date>
   </p>
 </body>

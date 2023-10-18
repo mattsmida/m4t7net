@@ -11,14 +11,14 @@
   <div>
     <span id='site-name'><a href="./index.html">M4T7</a></span>
     <ul>
-      <li><a href='./about.html'>About</a></li>
-      <li><a href='./blog.html'>Blog</a></li>
-      <li><a href='./contact.html'>Contact</a></li>
+      <li><a href='./about'>About</a></li>
+      <li><a href='./blog'>Blog</a></li>
+      <li><a href='./contact'>Contact</a></li>
     </ul>
     </div>
   </nav>
   <hr>
-  <h5><a href='./htl3.html'>← Part 3: Adventure</a></h5>
+  <h5><a href='./htl3'>← Part 3: Adventure</a></h5>
   <h1>How to live: Iteration</h1>
   <h2 id="be-a-hero">Be a hero</h3>
   <p>The message from 80,000 Hours was compelling.
@@ -274,6 +274,6 @@
   <p>Make an estimate, start testing it.
   Make an estimatt, then testing that.</p>
   <em>Um, that pun would work better if my name were something like Hope Thesius, but it&#39;s what I&#39;ve got.</em>
-  <h5><a href='./htl3.html'>← Part 3: Adventure</a></h5>
+  <h5><a href='./htl3'>← Part 3: Adventure</a></h5>
 </body>
 </html>

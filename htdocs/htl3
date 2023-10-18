@@ -11,15 +11,15 @@
   <div>
     <span id='site-name'><a href="./index.html">M4T7</a></span>
     <ul>
-      <li><a href='./about.html'>About</a></li>
-      <li><a href='./blog.html'>Blog</a></li>
-      <li><a href='./contact.html'>Contact</a></li>
+      <li><a href='./about'>About</a></li>
+      <li><a href='./blog'>Blog</a></li>
+      <li><a href='./contact'>Contact</a></li>
     </ul>
     </div>
   </nav>
   <hr>
-  <h5><a href='./htl2.html'>← Part 2: Contribution</a></h5>
-  <h5><a href='./htl4.html'>Part 4: Iteration →</a></h5>
+  <h5><a href='./htl2'>← Part 2: Contribution</a></h5>
+  <h5><a href='./htl4'>Part 4: Iteration →</a></h5>
   <h1>How to live: Adventure</h1>
   <h2 id="play-the-game-1">Play the game?</h2>
   <p>My good attitude about work and the ASA continued through the year.
@@ -287,7 +287,7 @@
   Otherwise you risk wasting your life.&quot;
   I&#39;m silent for four seconds as we hold eye contact.
   &quot;Bob, you&#39;re right.&quot;</p>
-  <h5><a href='./htl2.html'>← Part 2: Contribution</a></h5>
-  <h5><a href='./htl4.html'>Part 4: Iteration →</a></h5>
+  <h5><a href='./htl2'>← Part 2: Contribution</a></h5>
+  <h5><a href='./htl4'>Part 4: Iteration →</a></h5>
 </body>
 </html>

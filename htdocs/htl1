@@ -11,14 +11,14 @@
   <div>
     <span id='site-name'><a href="./index.html">M4T7</a></span>
     <ul>
-      <li><a href='./about.html'>About</a></li>
-      <li><a href='./blog.html'>Blog</a></li>
-      <li><a href='./contact.html'>Contact</a></li>
+      <li><a href='./about'>About</a></li>
+      <li><a href='./blog'>Blog</a></li>
+      <li><a href='./contact'>Contact</a></li>
     </ul>
     </div>
   </nav>
   <hr>
-  <h5><a href='./htl2.html'>Part 2: Contribution →</a></h5>
+  <h5><a href='./htl2'>Part 2: Contribution →</a></h5>
   <h1 id="how-to-live">How to live?</h1>
   <p>I&#39;ve tried a couple answers to that question.
   Got it right sometimes, temporarily in each case.</p>
@@ -154,6 +154,6 @@
   But they didn&#39;t seem better off for it.
   The smug satisfaction of outsmarting the system kept me focused.</p>
   <p>...For a little while anyway.</p>
-  <h5><a href='./htl2.html'>Part 2: Contribution →</a></h5>
+  <h5><a href='./htl2'>Part 2: Contribution →</a></h5>
 </body>
 </html>
