@@ -38,7 +38,7 @@ nav ul li {
   width: 30%;
   height: auto;
   border-radius: 25%;
-  padding: 10px;
+  margin: 15px 0px 15px 15px;
 }
 
 .blog-image {
@@ -64,6 +64,13 @@ a:link {
 date {
   font-style: italic;
   font-size: 90%;
+}
+
+#site-name {
+  font-size: 150%;
+  font-weight: bold;
+  float: left;
+  padding-inline-start: 0px;
 }
 
 #you-might-live {
