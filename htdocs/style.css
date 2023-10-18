@@ -5,8 +5,10 @@ body {
   font-family: Georgia, serif;
   font-size: 18px;
   line-height: 1.6em;
-  color: black;
+  color: #ddd;
+  background: black;
 }
+
 h1, h2, h3, nav {
   font-family: sans-serif;
   font-weight: normal;
@@ -14,12 +16,12 @@ h1, h2, h3, nav {
 
 nav a:link {
   text-decoration: none;
-  color: black;
+  color: #ddd;
 }
 
 nav a:visited{
   text-decoration: none;
-  color: black;
+  color: #ddd;
 }
 
 nav ul {
@@ -37,4 +39,34 @@ nav ul li {
   height: auto;
   border-radius: 25%;
   padding: 10px;
+}
+
+.blog-image {
+  width: 95%;
+  height: auto;
+  padding: 20px;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 90%;
+}
+
+a:visited {
+  color:thistle;
+}
+
+a:link {
+  color:plum;
+}
+
+date {
+  font-style: italic;
+  font-size: 90%;
+}
+
+#you-might-live {
+  display: flex;
+  justify-content: center;
 }
