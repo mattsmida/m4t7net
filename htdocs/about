@@ -14,7 +14,7 @@
 <body>
   <nav>
   <div>
-    <span id='site-name'><a href="./index.html">M4T7</a></span>
+    <span id='site-name'><a href="./">M4T7</a></span>
     <ul>
       <li><a href='./about'>About</a></li>
       <li><a href='./blog'>Blog</a></li>
@@ -37,5 +37,6 @@
   <p>
   How about a look at <a href="./resources/resume-smida.pdf">my resume</a>?
   </p>
+  <date>Last updated 2023-10</date>
 </body>
 </html>

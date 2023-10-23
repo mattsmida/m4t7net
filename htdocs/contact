@@ -14,7 +14,7 @@
 <body>
   <nav>
   <div>
-    <span id='site-name'><a href="./index.html">M4T7</a></span>
+    <span id='site-name'><a href="./">M4T7</a></span>
     <ul>
       <li><a href='./about'>About</a></li>
       <li><a href='./blog'>Blog</a></li>
