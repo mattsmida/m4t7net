@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: black;
+    }
+  </style>
+  <meta charset="utf-8">
+  <title>Memetown | M4T7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./meme-style.css">
+</head>
+<body>
+  <nav>
+  <div>
+    <span id='site-name'><a href="../">M4T7</a></span>
+    <ul>
+      <li><a href='../about'>About</a></li>
+      <li><a href='../blog'>Blog</a></li>
+      <li><a href='../contact'>Contact</a></li>
+    </ul>
+    </div>
+  </nav>
+  <hr>
+  <h2>Welcome to Memetown</h2>
+  <p>
+    Do your worst.
+  </p>
+  <form>
+    <table>
+      <tr>
+        <td>Picture URL: </td>
+        <td><input type='text' name='meme-url'></td>
+      </tr>
+      <tr>
+        <td>Top text: </td>
+        <td><input type='text' name='meme-top-text'></td>
+      </tr>
+      <tr>
+        <td>Bottom text: </td>
+        <td><input type='text' name='meme-bottom-text'></td>
+      </tr>
+      <tr>
+        <td><button>Go</button></td>
+      </tr>
+  </table>
+ </form>
+ <br>
+ <div id="meme-zone">
+   <div class="meme">
+     <div class="top-text">THIS ANIMAL</div>
+     <div class="bottom-text">WEARS AN EARRING</div>
+     <img src="./samples/otter.png">
+  </div>
+</div>
+
+</body>
+</html>
