@@ -28,40 +28,43 @@
   <p>
     Do your worst.
   </p>
-  <form>
+  <form id="meme-form">
     <table>
       <tr>
         <td>Picture URL: </td>
-        <td><input type='text' name='meme-url'></td>
+        <td><input type='text' name='meme-url' id='meme-url'></td>
       </tr>
       <tr>
         <td>Top text: </td>
-        <td><input type='text' name='meme-top-text'></td>
+        <td><input type='text' name='meme-top-text' id='meme-top-text'></td>
       </tr>
       <tr>
         <td>Bottom text: </td>
-        <td><input type='text' name='meme-bottom-text'></td>
+        <td><input type='text' name='meme-bottom-text' id='meme-bottom-text'></td>
       </tr>
       <tr>
-        <td><button>Go</button></td>
+        <td><button type='submit' id='meme-go-button'>Make it</button></td>
       </tr>
   </table>
  </form>
  <br>
  <div id="meme-zone">
+  <!--
    <div class="meme">
-     <div class="pic"><img src="./samples/square.png"></div>
-     <div class="top-text">THIS ANIMAL</div>
-     <div class="bottom-text">WEARS AN EARRING</div>
+     <div class="pic"><img src="./meme-samples/square.png"></div>
+     <div class="top-text">LOREM IPSUM</div>
+     <div class="bottom-text">DOLOR SIT AMET</div>
   </div>
   <br>
    <div class="meme">
-     <div class="pic"><img src="./samples/square.png"></div>
-     <div class="top-text">THAT ANIMAL</div>
-     <div class="bottom-text">HAS A FLASK</div>
+     <div class="pic"><img src="./meme-samples/square.png"></div>
+     <div class="top-text">CONSECTETUR ADIPISCING</div>
+     <div class="bottom-text">ELIT SED DO EIUSMOD TEMPOR INCIDIDUNT
+      UT LABORE ET DOLORE</div>
   </div>
-
+  -->
 </div>
 
+<script src="meme-script.js"></script>
 </body>
 </html>
