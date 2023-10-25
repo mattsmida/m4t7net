@@ -49,20 +49,21 @@
  </form>
  <br>
  <div id="meme-zone">
-  <!--
    <div class="meme">
      <div class="pic"><img src="./meme-samples/square.png"></div>
+     <button class="del">X</button>
      <div class="top-text">LOREM IPSUM</div>
      <div class="bottom-text">DOLOR SIT AMET</div>
-  </div>
-  <br>
+     <br>
+   </div>
    <div class="meme">
      <div class="pic"><img src="./meme-samples/square.png"></div>
+     <button class="del">X</button>
      <div class="top-text">CONSECTETUR ADIPISCING</div>
      <div class="bottom-text">ELIT SED DO EIUSMOD TEMPOR INCIDIDUNT
-      UT LABORE ET DOLORE</div>
+     UT LABORE ET DOLORE</div>
+     <br>
   </div>
-  -->
 </div>
 
 <script src="meme-script.js"></script>
