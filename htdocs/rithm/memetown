@@ -50,13 +50,13 @@
  <br>
  <div id="meme-zone">
    <div class="meme">
-     <div class="pic"><img src="./samples/otter.png"></div>
+     <div class="pic"><img src="./samples/square.png"></div>
      <div class="top-text">THIS ANIMAL</div>
      <div class="bottom-text">WEARS AN EARRING</div>
   </div>
   <br>
    <div class="meme">
-     <div class="pic"><img src="./samples/bear.png"></div>
+     <div class="pic"><img src="./samples/square.png"></div>
      <div class="top-text">THAT ANIMAL</div>
      <div class="bottom-text">HAS A FLASK</div>
   </div>
