@@ -25,22 +25,31 @@
   </nav>
   <hr>
   <h2>Welcome to Memetown</h2>
-  <p>
+  <h3>
     Do your worst.
-  </p>
+  </h3>
   <form id="meme-form">
     <table>
       <tr>
-        <td>Picture URL: </td>
-        <td><input type='text' name='meme-url' id='meme-url'></td>
+        <td>Picture URL&nbsp;&nbsp;</td>
+        <td>
+          <input type='text' name='meme-url'
+            id='meme-url' placeholder="https://example.com/m.jpg">
+        </td>
       </tr>
       <tr>
-        <td>Top text: </td>
-        <td><input type='text' name='meme-top-text' id='meme-top-text'></td>
+        <td>Top text&nbsp;&nbsp;</td>
+        <td>
+          <input type='text' name='meme-top-text'
+            id='meme-top-text' placeholder="your witticisms...">
+        </td>
       </tr>
       <tr>
-        <td>Bottom text: </td>
-        <td><input type='text' name='meme-bottom-text' id='meme-bottom-text'></td>
+        <td>Bottom text&nbsp;&nbsp;</td>
+        <td>
+          <input type='text' name='meme-bottom-text'
+            id='meme-bottom-text' placeholder="...go here">
+          </td>
       </tr>
       <tr>
         <td><button type='submit' id='meme-go-button'>Make it</button></td>
@@ -49,25 +58,24 @@
  </form>
  <br>
  <div id="meme-zone">
-   <!--
+   <!-- Test memes
    <div class="meme">
      <div class="pic"><img src="./meme-samples/square.png"></div>
-     <button class="del">X</button>
-     <div class="top-text">LOREM IPSUM</div>
-     <div class="bottom-text">DOLOR SIT AMET</div>
+     <button class="del">✕</button>
+     <div class="top-text meme-text">LOREM IPSUM</div>
+     <div class="bottom-text meme-text">DOLOR SIT AMET</div>
      <br>
    </div>
    <div class="meme">
      <div class="pic"><img src="./meme-samples/square.png"></div>
-     <button class="del">X</button>
-     <div class="top-text">CONSECTETUR ADIPISCING</div>
-     <div class="bottom-text">ELIT SED DO EIUSMOD TEMPOR INCIDIDUNT
+     <button class="del">✕</button>
+     <div class="top-text meme-text">CONSECTETUR ADIPISCING</div>
+     <div class="bottom-text meme-text">ELIT SED DO EIUSMOD TEMPOR INCIDIDUNT
      UT LABORE ET DOLORE</div>
      <br>
   </div>
   -->
 </div>
-
 <script src="meme-script.js"></script>
 </body>
 </html>
