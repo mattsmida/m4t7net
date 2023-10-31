@@ -7,9 +7,10 @@
     }
   </style>
   <meta charset="utf-8">
-  <title>Rithm Projects | M4T7</title>
+  <title>Memcards | M4T7</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./mem-cards-style.css">
 </head>
 <body>
   <nav>
@@ -23,11 +24,12 @@
     </div>
   </nav>
   <hr>
-  <h2>Rithm Projects</h2>
-  <ul>
-    <li><a href="./memcards">Memcards</a> <date>2023-11-03</date></li>
-    <li><a href="./memetown">Memetown</a> <date>2023-10-27</date></li>
-  </ul>
-
+  <h2>Test your memory</h2>
+  <h3>
+    Find out whether your brain is working properly with this simple test.
+  </h3>
+ <div id="game">
+</div>
+<script src="mem-cards.js"></script>
 </body>
 </html>
