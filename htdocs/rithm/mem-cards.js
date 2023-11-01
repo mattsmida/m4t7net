@@ -11,6 +11,9 @@ const COLORS = [
 const colors = shuffle(COLORS);
 createCards(colors);
 
+let [firstFlipDone, secondFlipDone] = [false, false];
+let cardsFlipped = [];
+
 /** Shuffle array items in-place and return shuffled array. */
 
 function shuffle(items) {
@@ -56,9 +59,6 @@ function createCards(colors) {
   }
 }
 
-let [firstFlipDone, secondFlipDone] = [false, false];
-let cardsFlipped = [];
-
 /** Flip a card face-up. */
 function flipCard(card) {
   card.classList.add('up');
@@ -72,9 +72,7 @@ function unFlipCard(card) {
 /** Handle clicking on a card: this could be first-card or second-card. */
 function handleCardClick(evt) {
   // Ignore click if card is already up or if two rapid flips happened.
-  if (evt.target.classList.contains('up')) { return; }
-
-  // TODO: REJECT RAPID FLIPS
+  if (evt.target.classList.contains('up') || secondFlipDone) { return; }
 
   if (!firstFlipDone && !secondFlipDone) {
     firstFlipDone = true;
@@ -93,21 +91,19 @@ function handleCardClick(evt) {
       cardsFlipped[1].classList.add('done');
     }
     setTimeout(() => {
-      // Unflip all cards that are not *done*.
+      // Unflip all cards that are not *done* and reset to listen for more.
       for (let card of document.querySelectorAll('#game td')) {
         if (!card.classList.contains('done')) {
           unFlipCard(card);
+          [firstFlipDone, secondFlipDone] = [false, false];
+          cardsFlipped = [];
         }
       }
     }, 1000);
-    [firstFlipDone, secondFlipDone] = [false, false];
-    cardsFlipped = [];
   }
 }
 
 function padNum(num) {
-  // Input: an integer from 0 to ... perhaps 60.
-  // Output: a two-character string, left-padded with a 0 if needed.
   return num.toString().length === 1 ? '0' + num.toString() : num.toString();
 }
 
@@ -116,7 +112,7 @@ function padNum(num) {
   card: It's a card.
   pur:  One example of a color. All colors are three characters long.
         Colors include (but are not limited to?) blu, pur, ora, red, gre.
-  up:   This card appears onscreen as face up. This happens when the user
+  up:   This card appears with its face up. This happens when the user
         manually flips it by clicking.
   done: After a successful pairing, cards are marked with this class to
         indicate that they will stay face up.
