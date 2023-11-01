@@ -13,9 +13,10 @@ createCards(colors);
 
 let [firstFlipDone, secondFlipDone] = [false, false];
 let cardsFlipped = [];
+let flipCount = 0;
+let leftToMatch = 10;
 
 /** Shuffle array items in-place and return shuffled array. */
-
 function shuffle(items) {
   // This algorithm does a "perfect shuffle", where there won't be any
   // statistical bias in the shuffle (many naive attempts to shuffle end up not
@@ -40,12 +41,12 @@ function shuffle(items) {
  */
 
 function createCards(colors) {
-  const gameBoard = document.getElementById("game"); // Given by RS.
+  const gameBoard = document.getElementById("game"); // Line given by RS.
   let cardNum = 0;
   let newTd;
   const newTr = document.createElement('tr');
 
-  for (let color of colors) {   // Given by RS.
+  for (let color of colors) {   // Line given by RS.
     // Fill in the table child of #game
     // First version will have two rows with five cells each, so </tr> after 5.
     // Each td gets id of 'card-xx' and classes 'card ccc' where ccc is color.
@@ -73,6 +74,7 @@ function unFlipCard(card) {
 function handleCardClick(evt) {
   // Ignore click if card is already up or if two rapid flips happened.
   if (evt.target.classList.contains('up') || secondFlipDone) { return; }
+  flipCount++;
 
   if (!firstFlipDone && !secondFlipDone) {
     firstFlipDone = true;
@@ -89,6 +91,7 @@ function handleCardClick(evt) {
     if (cardsFlipped[0].classList.value === cardsFlipped[1].classList.value) {
       cardsFlipped[0].classList.add('done');
       cardsFlipped[1].classList.add('done');
+      leftToMatch -= 2;
     }
     setTimeout(() => {
       // Unflip all cards that are not *done* and reset to listen for more.
@@ -99,12 +102,36 @@ function handleCardClick(evt) {
           cardsFlipped = [];
         }
       }
-    }, 1000);
+    }, FOUND_MATCH_WAIT_MSECS);
+    if (leftToMatch === 0) {
+      document.getElementById('num-flips').innerHTML = flipCount;
+      document.getElementById('brain-level').innerHTML =
+          brainFunction(flipCount);
+    }
   }
 }
 
 function padNum(num) {
   return num.toString().length === 1 ? '0' + num.toString() : num.toString();
+}
+
+function brainFunction(num) {
+  // Get a number of flips, return a description of brain function.
+  if (num < 10) {
+    return 'literally incredible';
+  } else if (num < 13) {
+    return 'admirable';
+  } else if (num < 16) {
+    return 'notable';
+  } else if (num < 19) {
+    return 'brain-like';
+  } else if (num < 22) {
+    return 'acceptable';
+  } else if (num < 25) {
+    return '\"needs improvement\"';
+  } else {
+    return '\"call your doctor\"';
+  }
 }
 
 /*

@@ -47,9 +47,9 @@
       -->
     </table>
     <p id="summary">Your brain's function is
-    <em><span id="brain-level">satisfactory</span></em>.
+    <em><span id="brain-level">TBD</span></em>.
     <br>
-    Game completion in <span id="num-guesses">N</span> guesses.
+    Game completion in <span id="num-flips">N</span> flips.
     </p>
   </div>
   <script src="mem-cards.js"></script>
