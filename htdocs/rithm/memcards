@@ -41,7 +41,7 @@
         <td id="card-05" class="card pur up done"></td>
         <td id="card-06" class="card red"></td>
         <td id="card-07" class="card blu"></td>
-        <td id="card-08" class="card ora up flip-1"></td>
+        <td id="card-08" class="card ora up"></td>
         <td id="card-09" class="card gre"></td>
       </tr>
       -->

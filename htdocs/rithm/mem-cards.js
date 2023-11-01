@@ -48,17 +48,16 @@ function createCards(colors) {
     // Each td gets id of 'card-xx' and classes 'card ccc' where ccc is color.
     if (cardNum % 5 === 0) { gameBoard.querySelector('table').append(newTr); }
     newTd = document.createElement('td');
-    newTd.id = 'card-' + padNum(cardNum); // TODO: TEST THIS
-    newTd.className = 'card ' + color;
-    newTd.addEventListener('click', function(e) {
-      handleCardClick(e);
-    });
+    newTd.id = 'card-' + padNum(cardNum);
+    newTd.classList.add('card', color);
+    newTd.addEventListener('click', function(e) { handleCardClick(e); });
     gameBoard.querySelector('table').append(newTd);
     cardNum++;
   }
 }
 
-let [firstFlip, secondFlip] = [false, false];
+let [firstFlipDone, secondFlipDone] = [false, false];
+let cardsFlipped = [];
 
 /** Flip a card face-up. */
 function flipCard(card) {
@@ -72,10 +71,38 @@ function unFlipCard(card) {
 
 /** Handle clicking on a card: this could be first-card or second-card. */
 function handleCardClick(evt) {
-  flipCard(evt.target);
-  setTimeout(() => {
-  unFlipCard(evt.target);
-  }, 1000);
+  // Ignore click if card is already up or if two rapid flips happened.
+  if (evt.target.classList.contains('up')) { return; }
+
+  // TODO: REJECT RAPID FLIPS
+
+  if (!firstFlipDone && !secondFlipDone) {
+    firstFlipDone = true;
+    flipCard(evt.target);
+
+  } else if (firstFlipDone) {
+    secondFlipDone = true;
+    flipCard(evt.target);
+    for (let card of document.querySelectorAll('#game td')) {
+      if (card.classList.contains('up') && !card.classList.contains('done')) {
+        cardsFlipped.push(card);
+      }
+    }
+    if (cardsFlipped[0].classList.value === cardsFlipped[1].classList.value) {
+      cardsFlipped[0].classList.add('done');
+      cardsFlipped[1].classList.add('done');
+    }
+    setTimeout(() => {
+      // Unflip all cards that are not *done*.
+      for (let card of document.querySelectorAll('#game td')) {
+        if (!card.classList.contains('done')) {
+          unFlipCard(card);
+        }
+      }
+    }, 1000);
+    [firstFlipDone, secondFlipDone] = [false, false];
+    cardsFlipped = [];
+  }
 }
 
 function padNum(num) {
