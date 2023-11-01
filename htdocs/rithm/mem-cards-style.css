@@ -1,7 +1,36 @@
 #game div {
-  border: 1px solid black;
-  width: 100px;
-  height: 100px;
-  margin: 20px;
+  border: 1px solid white;
+  width: 100%;
+  margin: 0px;
   display: inline-block;
+  vertical-align: middle;
+}
+
+.card {
+  text-align: center;
+  height: 130px;
+  font-size: 400%;
+  background-color: darkslategray;
+}
+
+
+.card.red.up { background-color: darkred; }
+.card.blu.up { background-color: darkblue; }
+.card.pur.up { background-color: darkmagenta; }
+.card.ora.up { background-color: darkgoldenrod; }
+.card.gre.up { background-color: darkolivegreen; }
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  border-spacing: 0.7em;
+}
+
+td {
+  border-radius: 10px;
+}
+
+#summary {
+  text-align: center;
 }
