@@ -6,11 +6,16 @@
   vertical-align: middle;
 }
 
+#stats{
+  text-align: center;
+  font-size: 150%;
+  margin: 5px;
+}
+
 .card {
   text-align: center;
   height: 130px;
   width: auto;
-  font-size: 400%;
   background-color: darkslategray;
   border-color: white;
   border-style: solid;
@@ -48,4 +53,16 @@ td {
 
 #summary {
   text-align: center;
+}
+
+#restart{
+	padding:5px;
+	font-size:1em;
+	background:#000;
+	color:#ccc;
+	font-weight:bold;
+  display: inline-flex;
+  position: relative;
+  left: 10%;
+  visibility: hidden;
 }

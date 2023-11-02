@@ -8,13 +8,15 @@ const COLORS = [
   "red", "blu", "gre", "ora", "pur",
 ];
 
-const colors = shuffle(COLORS);
+let colors = shuffle(COLORS);
 createCards(colors);
 
 let [firstFlipDone, secondFlipDone] = [false, false];
 let cardsFlipped = [];
 let flipCount = 0;
 let leftToMatch = 10;
+let restartButton = document.getElementById('restart');
+restartButton.addEventListener('click', function(e) { resetGame(); });
 
 /** Shuffle array items in-place and return shuffled array. */
 function shuffle(items) {
@@ -60,6 +62,9 @@ function createCards(colors) {
   }
 }
 
+
+
+
 /** Flip a card face-up. */
 function flipCard(card) {
   card.classList.add('up');
@@ -75,6 +80,12 @@ function handleCardClick(evt) {
   // Ignore click if card is already up or if two rapid flips happened.
   if (evt.target.classList.contains('up') || secondFlipDone) { return; }
   flipCount++;
+  document.getElementById('flip-count').innerHTML = flipCount;
+  if (flipCount === 1) {
+    document.getElementById('flip-word').innerHTML = 'flip';
+  } else {
+    document.getElementById('flip-word').innerHTML = 'flips';
+  }
 
   if (!firstFlipDone && !secondFlipDone) {
     firstFlipDone = true;
@@ -103,11 +114,13 @@ function handleCardClick(evt) {
         }
       }
     }, FOUND_MATCH_WAIT_MSECS);
-    if (leftToMatch === 0) {
-      document.getElementById('num-flips').innerHTML = flipCount;
+    if (leftToMatch === 0) {   // TESTING
+      // document.getElementById('num-flips').innerHTML = flipCount;
       document.getElementById('brain-level').innerHTML =
-          brainFunction(flipCount);
+        brainFunction(flipCount);
+      document.getElementById('restart').style.visibility = 'visible';
     }
+
   }
 }
 
@@ -115,8 +128,22 @@ function padNum(num) {
   return num.toString().length === 1 ? '0' + num.toString() : num.toString();
 }
 
+function resetGame() {
+  document.getElementById('game').querySelector('table').innerHTML = '';
+  colors = shuffle(colors)
+  createCards(colors);
+  [firstFlipDone, secondFlipDone] = [false, false];
+  cardsFlipped = [];
+  flipCount = 0;
+  leftToMatch = 10;
+  document.getElementById('brain-level').innerHTML = 'TBD';
+  document.getElementById('restart').style.visibility = 'hidden';
+  document.getElementById('flip-count').innerHTML = flipCount;
+  document.getElementById('flip-word').innerHTML = 'flips';
+}
+
 function brainFunction(num) {
-  // Get a number of flips, return a description of brain function.
+  // Given a number of flips, return a description of brain function.
   if (num < 10) {
     return 'literally incredible';
   } else if (num < 13) {

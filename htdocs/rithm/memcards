@@ -30,6 +30,10 @@
     Flip the cards to match their colors.
   </h3>
   <div id="game">
+    <p id="stats">
+      <span id="flip-count">0</span>
+      <span id="flip-word">flips</span>
+    </p>
     <table>
       <!-- Sample table layout:
       <tr>
@@ -47,10 +51,13 @@
       </tr>
       -->
     </table>
-    <p id="summary">Your brain's function is
-    <em><span id="brain-level">TBD</span></em>.
-    <br>
-    Task completion in <span id="num-flips">N</span> flips.
+    <p id="summary">
+      Your brain's function is
+      <em><span id="brain-level">TBD</span></em>.
+      <!-- <br>
+      Task completion in <span id="num-flips">N</span> flips.
+      -->
+      <button id="restart">Again?</button>
     </p>
   </div>
   <script src="mem-cards.js"></script>
