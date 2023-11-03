@@ -20,6 +20,7 @@ restartButton.addEventListener('click', function(e) { resetGame(); });
 
 /** Shuffle array items in-place and return shuffled array. */
 function shuffle(items) {
+  // Given by RS:
   // This algorithm does a "perfect shuffle", where there won't be any
   // statistical bias in the shuffle (many naive attempts to shuffle end up not
   // be a fair shuffle). This is called the Fisher-Yates shuffle algorithm; if
@@ -61,8 +62,6 @@ function createCards(colors) {
     cardNum++;
   }
 }
-
-
 
 
 /** Flip a card face-up. */
@@ -114,13 +113,12 @@ function handleCardClick(evt) {
         }
       }
     }, FOUND_MATCH_WAIT_MSECS);
-    if (leftToMatch === 0) {   // TESTING
-      // document.getElementById('num-flips').innerHTML = flipCount;
+    if (leftToMatch === 0) {
+      //document.getElementById('num-flips').innerHTML = flipCount;
       document.getElementById('brain-level').innerHTML =
         brainFunction(flipCount);
       document.getElementById('restart').style.visibility = 'visible';
     }
-
   }
 }
 
@@ -137,9 +135,9 @@ function resetGame() {
   flipCount = 0;
   leftToMatch = 10;
   document.getElementById('brain-level').innerHTML = 'TBD';
-  document.getElementById('restart').style.visibility = 'hidden';
   document.getElementById('flip-count').innerHTML = flipCount;
   document.getElementById('flip-word').innerHTML = 'flips';
+  document.getElementById('restart').style.visibility = 'hidden';
 }
 
 function brainFunction(num) {
